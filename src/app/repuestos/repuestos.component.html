@@ -1,0 +1,18 @@
+<div class="header">
+    <h2>Repuestos</h2>
+    <button class="btn btn-primary my-3" type="button" (click)="setHabilitar()">{{habilitar==true? 'Hide': 'Show'}}</button>
+    <button class="btn btn-rounded btn-primary" type="button" [routerLink]='["/repuestos/form"]'>New</button>
+</div>
+<div class="container" *ngIf="habilitar==true">
+    <div class="target" *ngFor="let repuesto of repuestos">
+        <hr>
+        <div class="target__body">
+            <h3><b>Codigo: </b>{{repuesto.codigo}}</h3>
+            <h4><b>Descripcion: </b> {{repuesto.descripcion}}</h4>
+            <h4><b>Marca: </b> {{repuesto.marca}}</h4>
+            <h4><b>Tipo: </b> {{repuesto.tipo}}</h4>
+            <h4><b>Anio: </b> {{repuesto.anio}}</h4>
+        </div>
+        <button type="button" name="button" [routerLink]='["/repuestos/form", repuesto.codigo]' class="btn btn-primary" id="btnEdit">Edit</button>
+    </div>
+</div>

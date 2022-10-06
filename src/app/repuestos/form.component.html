@@ -1,0 +1,40 @@
+<style>
+    .card {
+        background: #0f0c29;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-repeat: no-repeat;
+    }
+</style>
+
+<div class="card text-white">
+    <div class="card-header">{{titulo}}</div>
+    <div class="card-body">
+        <form ngNativeValidate (ngSubmit)="create()">
+            <div class="form-group row">
+                <label for="" class="col-form-label col-sm-2">Descripcion: </label>
+                <div class="col-sm-6"><input type="text" class="form-control" [(ngModel)]="repuestos.descripcion" name="nombre"></div>
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-form-label col-sm-2">Marca: </label>
+                <div class="col-sm-6"><input type="text" class="form-control" [(ngModel)]="repuestos.marca" name="apellido"></div>
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-form-label col-sm-2">Anio: </label>
+                <div class="col-sm-6"><input type="text" class="form-control" [(ngModel)]="repuestos.anio" name="email"></div>
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-form-label col-sm-2">Tipo: </label>
+                <div class="col-sm-6"><input type="text" class="form-control" [(ngModel)]="repuestos.tipo" name="email"></div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <button class="btn btn-primary" role="button">Save!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
